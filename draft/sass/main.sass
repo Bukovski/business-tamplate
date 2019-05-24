@@ -1,0 +1,648 @@
+@import "libs"
+@import "vars"
+
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+	
+a
+	color: $black
+	transition: .25s
+	cursor: pointer
+	
+	&:hover
+		color: $redDark
+		text-decoration: none
+		
+input
+	display: block
+	width: 100%
+	height: 52px
+	padding: 6px 19px
+	border: 1px solid #ccc
+	border-radius: 4px
+	font-size: 14px
+	line-height: 1.42857143
+	color: #555
+	background-color: #fff
+		
+/*------------------ MY STYLE -----------------
+	HEADER
+	FOOTER */
+	
+.container
+	max-width: $innerGrid
+	width: 100%
+	margin: 0 auto
+	
+	
+.clearfix::after
+	content: ""
+	display: table
+	clear: both
+
+	
+.button
+	padding: 0.4em 1.3em
+	border-radius: .3em
+	letter-spacing: -.01em
+	border: 2px solid $redDark
+	cursor: pointer
+	white-space: nowrap
+	color: $white
+	background-color: $redDark
+	transition: .25s
+	
+	&:hover
+		background-color: $white
+		border: 2px solid $redDark
+		
+	&--big
+		padding: 0.7em 1.5em
+		font-size: 25px
+		text-transform: uppercase
+		border: 2px solid $yellow
+		background-color: $yellow
+		
+		&:hover
+			color: $yellow
+			border: 2px solid $yellow
+			
+			
+.description
+	margin: 0
+	margin-bottom: 4px
+	text-align: center
+	
+	&__title
+		margin: 0
+		line-height: 1
+		letter-spacing: -.8px
+		font-size: 36px
+		font-weight: 700
+	
+	&__subtitle
+		margin: 0
+		margin-bottom: 12px
+		color: $greyMiddle
+		font-size: 20px
+		font-weight: 100
+		line-height: 26px
+	
+	&__dash
+		width: 47px
+		height: 5px
+		margin: 0 auto
+		background-color: $black
+	
+/*------------------ HEADER -------------------*/
+
+.header
+	margin: 0
+	width: 100%
+	
+	&__contact
+		height: 42px
+		font-size: 15px
+		font-weight: 400
+		border-bottom: 1px solid $greyLight
+		background-color: $greyLighter
+		
+	&__phone
+		float: right
+		padding: 8px 18px 6px 0
+		text-align: right
+		border-right: 1px solid $greyLight
+	
+	&__feedback
+		float: right
+	
+	&__mail
+		float: right
+		padding: 8px 12px 6px 25px
+		
+	.icon
+		&-mobile
+			position: relative
+			top: 3px
+			right: 4px
+			font-size: 18px
+			
+		&-mail
+			position: relative
+			top: 3px
+			right: 3px
+			font-size: 18px
+		
+		&-facebook
+			float: right
+			width: 26px
+			height: 26px
+			padding: 5px
+			margin-top: 6px
+			background-color: $blue
+			border-radius: 5px
+			
+			&:before
+				color: $white
+				font-size: 16px
+				
+		/*------------------ HEADER LOGO ------------------*/
+		
+		&-logo
+			float: left
+			margin-top: 17px
+			font-size: 50px
+			
+	&__main
+		//overflow: hidden
+
+	&__wrap
+		padding-left: 9px
+	
+	&__logo
+		margin-top: 23px
+		padding-left: 0
+		
+		&:hover
+			color: $black
+	
+	&__title
+		height: 47px
+		margin: 0
+		font-size: 37px
+		font-weight: 700
+		letter-spacing: -0.8px
+		
+	&__subheader
+		margin: 0
+		padding-left: 2px
+		font-size: 15px
+		font-weight: 400
+		letter-spacing: -0.2px
+		
+	/*------------------ HEADER MENU ------------------*/
+	&__menu
+		float: right
+		margin-top: 36px
+		margin-right: 1.3%
+		margin-bottom: 33px
+	
+	&__list
+		padding: 0
+	
+	&__item
+		display: inline-block
+	
+		& + li:before
+			content: "\2022"
+			margin: 0 9px
+			
+		&--active > a
+			color: $redDark
+		
+	&__link
+		/**/
+	
+	/*------------------ HEADER BUTTON ------------------*/
+	&__consultation
+		float: right
+		padding: 0
+		margin-top: 51px
+		margin-left: -12px
+	
+	/*------------------ HEADER BANNER ------------------*/
+	&__banner
+		position: relative
+		height: 590px
+		text-align: center
+		background: linear-gradient(to top, rgba(18, 135, 191, 0.2), rgba(18, 135, 191, 0.2)),url("../image/header-baner/baner-header-1280.jpg") $greyLight no-repeat 50% 50%
+		background-size: cover
+		
+		
+		&-wrap
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			width: 100%
+		
+		&-title
+			margin: 0 0
+			font-size: 48px
+			font-weight: 700
+			color: #fff
+			
+		&-text
+			margin: 0
+			margin-top: -20px
+			margin-bottom: 32px
+			font-size: 30px
+			font-weight: 100
+			color: #fff
+			
+/*------------------ ABOUT US -------------------*/
+.about-us
+	margin-top: 98px
+	padding-bottom: 119px
+	
+	&__wrap
+		margin-top: 47px
+	
+	&__shell
+		padding: 0 26px
+		text-align: center
+		
+	&__img
+		width: 83px
+		height: 83px
+		margin: 0 auto
+		object-fit: none
+		
+		&--like
+			object-position: 0 0
+		
+		&--book
+			object-position: -95px 0
+			
+		&--manage
+			object-position: -187px 0
+		
+	&__title
+		margin: 12px 0 0 0
+		font-size: 22px
+		font-weight: 700
+		letter-spacing: -0.6px
+		color: #424242
+		
+	&__text
+		margin-top: 3px
+		padding: 0 6px
+		color: $greyMiddle
+		font-family: $sans-font
+		font-size: 14px
+		font-weight: 400
+		line-height: 22px
+		letter-spacing: -0.3px
+	
+/*------------------ APPROCH -------------------*/
+.approch
+	padding-top: 71px
+	padding-bottom: 130px
+	background-color: $greyLighter
+
+	&__step
+		margin: 40px 0 0
+		padding-right: 0
+		background-color: $white
+		border-radius: 5px
+	
+	&__picture
+		padding-left: 0
+		
+	&__img-wrap
+		float: left
+		width: 340px
+		height: 236px
+		overflow: hidden
+	
+	&__img
+		background-color: $greyLight
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+		
+	
+	&__mark
+		position: absolute
+		bottom: 29%
+		right: -14%
+		width: 55px
+		padding: 23px
+		padding-top: 30px
+		box-sizing: content-box
+		text-align: center
+		border: 2px solid $white
+		border-radius: 5px
+		background-color: $redDark
+		color: $white
+		line-height: 1
+		z-index: 2
+		
+	&__number
+		font-family: $georgia-font
+		font-size: 50px
+		font-weight: 500
+		line-height: 0.4
+		
+	&__under-number
+		font-size: 20px
+		font-weight: 400
+	
+	&__check
+		padding: 6% 8.6% 0 8%
+		
+	&__header
+		margin: 0
+		font-size: 18px
+		letter-spacing: -1px
+		
+	&__text
+		margin: 2px 0
+		font-family: $sans-font
+		font-size: 14px
+		font-weight: 400
+		line-height: 22px
+		letter-spacing: -0.2px
+		color: $greyMiddle
+		
+	&__step:nth-child(even)
+		.approch__picture
+			float: right
+			
+		.approch__mark
+			right: 85%
+
+		.approch__check
+			text-align: right
+
+/*------------------ WORK -------------------*/
+.work
+	padding-top: 110px
+	padding-bottom: 128px
+	color: $white
+	background-color: $redDark
+	
+	.description__subtitle
+		color: $white
+		
+	.description__dash
+		background-color: $white
+		
+	&__container
+		margin-top: 46px
+		
+	&__project
+		padding: 0
+		
+		&--right
+			.work__link
+				right: 50%
+				
+			.work__img-wrap
+				float: right
+				
+	&__img-wrap
+		float: left
+		width: 50%
+		height: 253px
+		overflow: hidden
+		
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+		background-color: $greyText
+		
+	&__link
+		float: left
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		width: 50%
+		padding-top: 13.5%
+		text-align: center
+		color: $white
+		background-color: $redLight
+		
+		& .icon-plaine
+			font-size: 42px
+			
+	&__name
+		margin-top: 12%
+		margin-bottom: 0
+		font-size: 26px
+		font-weight: 400
+		letter-spacing: 0.6px
+		line-height: 0
+		
+	&__text
+		margin: 0
+		margin-top: 9px
+		letter-spacing: 0.5px
+
+/*------------------ FEEDBACK -------------------*/
+.feedback
+	padding-top: 97px
+	padding-bottom: 112px
+	background-color: $blue
+	
+	.description,
+	.description__subtitle
+		color: $white
+		
+	.icon-arrow-circle
+		position: absolute
+		margin-left: -33px
+		font-size: 65px
+		transform: rotate(-90deg)
+		
+	&__shell
+		left: 16.7%
+		margin-top: 118px
+		border-radius: 5px
+		text-align: center
+		background-color: $white
+		
+	&__shell::before //triangle
+		content: ""
+		display: inline-block
+		position: absolute
+		top: -32px
+		left: 45%
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 32.5px 35px 32.5px
+		border-color: transparent transparent #ffffff transparent
+		line-height: 0px
+		_border-color: #000000 #000000 #ffffff #000000
+		_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000')
+		
+	&__close-button
+		position: absolute
+		right: -16px
+		top: -21px
+		width: 44px
+		height: 44px
+		border-radius: 50%
+		font-size: 46px
+		color: $white
+		background-color: $redDark
+		
+		.icon-close-circle
+			position: relative
+			top: -13px
+			left: -1px
+			
+	&__title
+		display: inline-block
+		width: 86%
+		margin-top: 45px
+		font-size: 15px
+		font-weight: 400
+		line-height: 22px
+		letter-spacing: -0.3px
+		color: $greyMiddle
+		
+	&__form
+		padding: 1.7% 16%
+		
+		.button
+			margin-top: 35px
+			margin-bottom: 58px
+			padding: 0.4em 1.7em
+			
+			&:hover
+				color: $redDark
+		
+	&__input
+		padding: 6px 19px
+		margin-top: 9px
+		
+
+		
+/*------------------ ROACH -------------------*/
+.roach
+	padding-top: 91px
+	padding-bottom: 82px
+	text-align: center
+	color: $white
+	background-color: $greyDark
+	letter-spacing: -0.9px
+	
+	&__title
+		margin: 0
+		font-size: 29px
+		font-weight: 700
+		line-height: 22px
+		
+	&__social
+		margin-top: 28px
+		
+		&-link
+			display: inline-block
+			width: 47px
+			height: 48px
+			margin: 0 10px
+			padding-top: 5px
+			border: 2px solid $greyMiddle
+			-webkit-border-radius: 5px
+			border-radius: 3px
+			font-size: 23px
+			
+			&:hover
+				border-color: $redDark
+			
+			i
+				color: $white
+				
+	&__text
+		margin-top: 31px
+		letter-spacing: 0
+		font-family: $sans-font
+		font-size: 14px
+		font-weight: 400
+		line-height: 22px
+		color: $greyText
+		
+	&__form
+		margin-top: 31px
+		
+		.button
+			margin-top: 29px
+			letter-spacing: 0.8px
+			border-radius: 2px
+			border: 2px solid $greyMiddle
+			background: $greyDark
+			padding: 0.6em 2.1em
+			
+			&:hover
+				background: $greyMiddle
+		
+	&__input
+		width: 69%
+		margin: 0 auto
+		color: $greyText
+		border-color: $greyMiddle
+		background-color: $greyMiddle
+		
+		&::placeholder
+			color: $greyText
+			
+		&:focus
+			outline: none !important
+			border: 1px solid $greyText
+
+
+/*------------------ FOOTER -------------------*/
+.footer
+	padding: 7px 0
+	text-align: center
+	font-family: $sans-font
+	font-size: 14px
+	font-weight: 400
+	line-height: 27px
+	color: $greyText
+	background-color: $greyMiddle
+	
+	&__address
+		display: inline-block
+		font-style: normal
+		
+	&__text
+		display: inline-block
+	
+
+		
+@import "fonts"
+@import "media"

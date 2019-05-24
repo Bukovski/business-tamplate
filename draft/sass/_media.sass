@@ -1,0 +1,100 @@
+@import "vars"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1054px)
+  .header .icon-logo
+    width: 79px
+    padding-right: 0
+    font-size: 42px
+    
+  .header__wrap
+    width: 120px
+    padding: 0
+    
+  .header__logo
+    width: 190px
+    float: left
+    padding-right: 0
+
+  
+  .header__title
+    height: 32px
+    margin-top: 8px
+    font-size: 26px
+  
+  .header__subheader
+    font-size: 14px
+    
+  .header__menu
+    text-align: center
+    
+  .header__item + li:before
+    margin: 0 2px
+  
+  .header__consultation
+    margin-left: 0
+    
+  .about-us__shell
+    padding: 0
+    
+  .approch .approch__step
+    .approch__mark
+      bottom: 23%
+      padding: 13px
+      padding-top: 25px
+    
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  
+  /*Disable Animation on Mobile Devices*/
+  .animated
+    /*CSS transitions*/
+    -o-transition-property: none !important
+    -moz-transition-property: none !important
+    -ms-transition-property: none !important
+    -webkit-transition-property: none !important
+    transition-property: none !important
+    /*CSS transforms*/
+    -o-transform: none !important
+    -moz-transform: none !important
+    -ms-transform: none !important
+    -webkit-transform: none !important
+    transform: none !important
+    /*CSS animations*/
+    -webkit-animation: none !important
+    -moz-animation: none !important
+    -o-animation: none !important
+    -ms-animation: none !important
+    animation: none !important
+  
+  
+  .approch .approch__step
+    .approch__picture
+      float: left
+    
+    .approch__img
+      display: none
+      
+    .approch__mark
+      float: left
+      position: inherit
+      right: 0
+      margin: 5px 5px 0 5px
+  
+    .approch__check
+      padding: 1% 2% 0
+      text-align: left
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  /**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
