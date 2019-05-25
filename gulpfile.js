@@ -32,10 +32,12 @@ const PATH = {
     './node_modules/html5shiv/dist/html5shiv.min.js', //html5 теги header footer
     './node_modules/svg4everybody/dist/svg4everybody.min.js', //svg
     './node_modules/respond/main.js', //media запросы
+    PROJECT_FOLDERS.START + "_libs/validate-master/dist/validate.polyfills.js",
     // './node_modules/picturefill/dist/picturefill.min.js' //тег picture если его использовали для разметки
   ], //поддержка старыми браузерами
   scriptLibs: [
     PROJECT_FOLDERS.START + "_libs/jquery/dist/jquery.min.js",
+    PROJECT_FOLDERS.START + "_libs/validate-master/dist/validate.min.js", //https://github.com/cferdinandi/validate
     // PROJECT_FOLDERS.START + "_libs/owl.carousel/dist/owl.carousel.min.js"
   ], //подключаем свои библиотеки
   scriptInput: [

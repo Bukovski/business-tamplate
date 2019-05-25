@@ -333,10 +333,10 @@
         <!-- /.feedback__close-button -->
         <h3 class="feedback__title">Sit down with our experts to receive a free customized marketing plan for your busi- ness + Learn How To Use Google and Facebook to get 5000% ROI or more</h3>
         <!-- /.feedback__title -->
-        <form class="feedback__form">
-          <input class="feedback__input" type="text" name="name" placeholder="Your Name">
-          <input class="feedback__input" type="text" name="phone" placeholder="Contact Number">
-          <input class="feedback__input" type="text" name="name" placeholder="Company Name">
+        <form class="feedback__form" data-validate>
+          <input class="feedback__input" type="text" name="name" placeholder="Your Name" minlength="3" maxlength="20" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{3,20}$" required>
+          <input class="feedback__input" type="text" name="phone" placeholder="Contact Number 099-543-2198" value="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+          <input class="feedback__input" type="text" name="company-name" placeholder="Company Name" minlength="3" maxlength="20" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required>
           <button class="button">SUBMIT NOW</button>
         </form>
         <!-- /.feedback__form -->
@@ -367,8 +367,8 @@
   <p class="roach__text">Subscribe to our newsletter to stay update with what is new</p>
   <!-- /.roach__text -->
   <div class="container">
-    <form class="roach__form">
-      <input class="roach__input" type="email" name="email" placeholder="Email Address">
+    <form class="roach__form" data-validate>
+      <input class="roach__input" type="email" name="email" placeholder="Email Address" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
       <button class="button">Subscribe</button>
     </form>
   </div>

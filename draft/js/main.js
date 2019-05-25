@@ -3,7 +3,7 @@ $(function() {
   $("a[href^='#']").click(function(){
     var _href = $(this).attr("href");
     
-    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1500);
     return false;
   });
   
@@ -45,4 +45,21 @@ $(function() {
     miniMenu(scroll);
     activeSectionMenuScroll(scroll)
   });
+  
+  
+  /************** Validate form ****************/
+  
+  //https://github.com/cferdinandi/validate
+  validate.init({
+    selector: '[data-validate]',
+    disableSubmit: true,
+    onSubmit: function (form, fields) {
+      alert('Form submitted successfully!');
+      console.log('Data for PHP:', form, fields);
+    },
+  });
+  
+  //1,Регулярку на проверку имени и компании в форме
+  //2, Оптимизировать прокрутку. В цикле много раз вызывает код на запуск у подсветки пункта меню что не хороше
+ 
 });
