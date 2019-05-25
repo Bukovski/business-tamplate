@@ -250,9 +250,11 @@ input
 			content: "\2022"
 			margin: 0 9px
 			
-		&--active > a,
+		&--active > a
+			color: $redDark !important
+			
 		a:focus
-			color: $redDark
+			color: $black
 		
 	&__link
 		/**/
@@ -693,7 +695,7 @@ input
 	font-size: 14px
 	line-height: 1.3
 	
-	
+
 
 @import "fonts"
 @import "media"

@@ -10,8 +10,9 @@ $(function() {
   /************** фиксированное мини-меню при скроле ****************/
   
   function miniMenu(scroll) {
-    var topHeightHide = 90;
-
+    var scroll = scroll || $(document).scrollTop()
+      , topHeightHide = 90;
+      
     if (scroll > topHeightHide) {
       $('.header__main').addClass('header__main--fixed');
     } else {
@@ -26,6 +27,7 @@ $(function() {
   function activeSectionMenuScroll(scroll) {
     var sections = $('section, header')
       , nav = $('nav')
+      , scroll = scroll || $(document).scrollTop()
       , navHeight = nav.outerHeight();
 
     sections.each(function () {
@@ -39,11 +41,28 @@ $(function() {
     });
   }
   
+  activeSectionMenuScroll();
+  
+  /************** скролл события ****************/
+  
+  var counter = 0;
+  
   $(window).scroll(function() {
     var scroll = $(document).scrollTop();
   
     miniMenu(scroll);
-    activeSectionMenuScroll(scroll)
+  
+    const interval = setTimeout(function () { //нужно для сокращения количества запросов (экономия памяти)
+      activeSectionMenuScroll(scroll);
+      
+      counter = 0;
+    }, 120);
+  
+    counter++;
+    
+    if (counter > 1) {
+      clearInterval(interval);
+    }
   });
   
   
@@ -58,8 +77,9 @@ $(function() {
       console.log('Data for PHP:', form, fields);
     },
   });
+
+  /************** Animation ****************/
+  new WOW().init();
   
-  //1,Регулярку на проверку имени и компании в форме
-  //2, Оптимизировать прокрутку. В цикле много раз вызывает код на запуск у подсветки пункта меню что не хороше
  
 });

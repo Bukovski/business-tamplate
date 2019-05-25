@@ -38,7 +38,7 @@ const PATH = {
   scriptLibs: [
     PROJECT_FOLDERS.START + "_libs/jquery/dist/jquery.min.js",
     PROJECT_FOLDERS.START + "_libs/validate-master/dist/validate.min.js", //https://github.com/cferdinandi/validate
-    // PROJECT_FOLDERS.START + "_libs/owl.carousel/dist/owl.carousel.min.js"
+    PROJECT_FOLDERS.START + "_libs/wow/dist/wow.min.js" //https://wowjs.uk/
   ], //подключаем свои библиотеки
   scriptInput: [
     PROJECT_FOLDERS.START + "js/**/*.js"

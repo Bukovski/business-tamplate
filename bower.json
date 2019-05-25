@@ -21,6 +21,8 @@
     "jquery": "^3.4.1",
     "bootstrap-grid": "^3.3.6-beta.1",
     "normalize.css": "^8.0.1",
-    "pushy": "^1.2.0"
+    "pushy": "^1.2.0",
+    "wow": "wowjs#^1.1.2",
+    "animate.css": "^3.7.0"
   }
 }
