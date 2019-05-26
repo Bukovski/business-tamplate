@@ -1,6 +1,5 @@
 @import "vars"
 
-/*==========  Desktop First Method  ==========*/
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1024px)
@@ -49,34 +48,60 @@
   
     .button
       font-size: 14px
+      
+      
+  .header__banner
+    height: 400px
     
+  .header__banner-title
+    font-size: 40px
+    
+  .header__banner-text
+    font-size: 25px
+    
+  .button--big
+    font-size: 20px
+  
+  /*---- ABOUT US ----*/
+
+  .about-us
+    padding-top: 60px
+    padding-bottom: 90px
+  
   .about-us__shell
     padding: 0
     
-  .approch .approch__step
-    .approch__mark
-      bottom: 23%
-      padding: 13px
-      padding-top: 25px
+  /*---- APPROCH ----*/
+
+  .approch__step
+    margin-top: 20px
     
+  .approch__mark
+    display: none
+    
+  .approch__picture
+    overflow: hidden
+    
+  .approch__check
+    padding: 3% 3% 0 3%
+    
+  /*---- WORK ----*/
+  /*---- FEEDBACK ----*/
+  
+  .feedback__form
+    padding: 1.7% 3%
+    
+  .feedback__shell
+    margin-top: 85px
+    
+  .feedback__shell::before
+    display: none
+
+  /*---- ROACH ----*/
+  
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-  .hamburger
-    display: inline-block
-
-  #mobile-menu,
-  .site-overlay
-    display: inline-block
-  
-  .header__main
-    .header__menu,
-    .header__consultation
-       display: none
-  
-    .header__logo
-      left: 27%
-      
   /*Disable Animation on Mobile Devices*/
   .animated
     /*CSS transitions*/
@@ -98,22 +123,98 @@
     -ms-animation: none !important
     animation: none !important
     
-  .approch .approch__step
-    .approch__picture
+    
+  .hamburger
+    display: inline-block
+
+  #mobile-menu,
+  .site-overlay
+    display: inline-block
+  
+  .header__main
+    .header__menu,
+    .header__consultation
+       display: none
+  
+    .header__logo
+      left: 27%
+      
+  /*---- ABOUT US ----*/
+
+  .about-us
+    padding-top: 20px
+    padding-bottom: 60px
+    
+  .about-us__wrap
+    margin-top: 15px
+    
+  .about-us__img
+    zoom: .8
+      
+  /*---- APPROCH ----*/
+
+  .approch,
+  .work,
+  .feedback,
+  .roach
+    padding-top: 40px
+    padding-bottom: 60px
+    
+  .approch__picture
+    float: left !important
+  
+  .approch__step .approch__check
+    padding: 1% 2% 0
+    text-align: left !important
+    
+  /*---- WORK ----*/
+  
+  .work__container
+    margin-top: 20px
+    
+  .work__project--right
+    .work__link
+      right: 0
+    
+    .work__img-wrap
       float: left
     
-    .approch__img
-      display: none
-      
-    .approch__mark
-      float: left
-      position: inherit
-      right: 0
-      margin: 5px 5px 0 5px
+  .work__link
+    padding-top: 4%
+    
+  .work__img-wrap
+    height: 165px
   
-    .approch__check
-      padding: 1% 2% 0
-      text-align: left
+  .work__name
+    margin-top: 5%
+    font-size: 20px
+
+  /*---- FEEDBACK ----*/
+  .feedback .icon-arrow-circle,
+  .feedback__close-button
+    display: none
+    
+  .feedback__form
+    padding: 0% 1%
+    
+  .feedback__shell
+    margin-top: 40px
+    border-radius: 0
+    
+  .feedback__form .button
+    margin-top: 20px
+    margin-bottom: 25px
+    
+  /*---- ROACH ----*/
+  .roach__input
+    width: 98%
+
+  /*---- FOOTER ----*/
+  .footer
+    padding: 0
+    
+  .footer__text
+    margin: 5px 0
 
 
 /* Extra Small Devices, Phones */
@@ -122,7 +223,64 @@
     .header__logo
       float: right
       left: -12%
+  
+  .header__banner
+    height: 300px
 
+  .header__banner-title
+    font-size: 35px
+    font-weight: 400
+  
+  .header__banner-text
+    margin-top: 5px
+    font-size: 20px
+    line-height: 1
+  
+  .button--big
+    font-size: 16px
+
+  /*---- ABOUT US ----*/
+  /*---- APPROCH ----*/
+  
+  .description__title
+    font-size: 27px
+    font-weight: 500
+    
+  .description__subtitle
+    font-size: 18px
+  
+  .approch__picture
+    display: none
+    
+  .approch__check
+    width: 100%
+    padding: 0 10px
+
+  /*---- WORK ----*/
+  /*---- FEEDBACK ----*/
+  .feedback__input,
+  .roach__input
+    height: 40px
+    padding: 4px 10px
+    
+  .button
+    font-size: 14px
+
+  /*---- ROACH ----*/
+  .roach__text
+    margin: 7px 0
+    
+  .roach__social-link
+    width: 40px
+    height: 40px
+    padding-top: 0
+    
+  .roach__form
+    margin-top: 0
+    
+  .roach__form .button
+    margin-top: 20px
+  
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

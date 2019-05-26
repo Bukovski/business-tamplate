@@ -11,9 +11,10 @@ $(function() {
   
   function miniMenu(scroll) {
     var scroll = scroll || $(document).scrollTop()
+      , widthScreen = $(window).width()
       , topHeightHide = 90;
       
-    if ($(window).width() > 1024) {
+    if (widthScreen >= 1024) {
       if (scroll > topHeightHide) {
         $('.header__main').addClass('header__main--fixed');
       } else {

@@ -355,12 +355,6 @@ input
 	&__picture
 		padding-left: 0
 		
-	&__img-wrap
-		float: left
-		width: 340px
-		height: 236px
-		overflow: hidden
-	
 	&__img
 		background-color: $greyLight
 		width: 100%
@@ -506,8 +500,10 @@ input
 		transform: rotate(-90deg)
 		
 	&__shell
-		left: 16.7%
+		float: none
 		margin-top: 118px
+		margin-left: auto
+		margin-right: auto
 		border-radius: 5px
 		text-align: center
 		background-color: $white
@@ -704,6 +700,7 @@ input
 #mobile-menu,
 .site-overlay
 	display: none
+	z-index: 100500
 
 .pushy
 	&.pushy-left
