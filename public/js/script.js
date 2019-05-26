@@ -13,10 +13,12 @@ $(function() {
     var scroll = scroll || $(document).scrollTop()
       , topHeightHide = 90;
       
-    if (scroll > topHeightHide) {
-      $('.header__main').addClass('header__main--fixed');
-    } else {
-      $('.header__main').removeClass('header__main--fixed');
+    if ($(window).width() > 1024) {
+      if (scroll > topHeightHide) {
+        $('.header__main').addClass('header__main--fixed');
+      } else {
+        $('.header__main').removeClass('header__main--fixed');
+      }
     }
   }
   
@@ -65,6 +67,36 @@ $(function() {
     }
   });
   
+  
+  /************** hamburger mobile menu ****************/
+  //hamburger toggle click
+  var $body = $('body'),
+    $hamburger = $("#js-hamburger");
+  
+  $hamburger.on("click", function () {
+    $(this).addClass("is-active")
+  });
+  
+  function closeHamburger () {
+    return $hamburger.removeClass("is-active");
+  }
+  
+  $(".site-overlay").on("click", function () {
+    closeHamburger();
+  });
+  
+  $(".header__menu").clone().appendTo("#mobile-menu"); //клонируем меню с шапки в мобильное меню
+  $(".header__consultation").clone().appendTo("#mobile-menu"); //клонируем меню с шапки в мобильное меню
+  $("#mobile-menu").find("*").attr("style", ""); //очищаем от встроеных стилей
+  
+  //open close mobile menu if you click a link
+  $(".header__item").on('click touchstart', function() {
+    if ($('.pushy').hasClass('pushy-left')) {
+      $body.removeClass('pushy-open-left');
+    }
+    
+    closeHamburger();
+  });
   
   /************** Validate form ****************/
   

@@ -37,7 +37,7 @@
 <body>
 
 <header id="home" class="header">
-  <div class="header__contact">
+  <div class="header__contact clearfix">
     <div class="container">
       <div class="row">
         <div class="header__feedback">
@@ -62,15 +62,23 @@
   <div class="header__main clearfix">
     <div class="container">
       <div class="row">
-        <a class="header__logo col-md-3" href="index.html">
+        <div id="js-hamburger" class="hamburger hamburger--squeeze menu-btn">
+          <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+          </span>
+        </div>
+        
+        
+        <a class="header__logo col-md-3 col-sm-3 col-xs-7" href="index.html">
           <div class="row">
             <i class="icon-logo col-md-4 col-sm-4"></i>
-            <div class="header__wrap col-md-8 col-sm-8">
+            <div class="header__wrap col-md-8 col-sm-7">
               <h1 class="header__title">Business</h1>
               <p class="header__subheader">Tagline goes here</p>
             </div>
           </div>
         </a>
+        
         <!-- /.header__logo -->
         <div class="header__consultation col-md-2">
           <a class="button" href="#feedback">Free Consultation</a>
@@ -110,6 +118,11 @@
     <!-- /.container -->
   </div>
   <!-- /.header__banner -->
+  
+  <!--  mobile menu start -->
+  <div id="mobile-menu" class="pushy pushy-left"></div>
+  <div class="site-overlay"></div>
+  <!--  mobile menu finish -->
 </header>
 
 <section id="about-us" class="about-us">

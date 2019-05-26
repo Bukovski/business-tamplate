@@ -210,6 +210,7 @@ input
 	
 	&__wrap
 		padding-left: 9px
+		white-space: nowrap
 	
 	&__logo
 		//margin-top: 23px
@@ -236,8 +237,7 @@ input
 	/*------------------ HEADER MENU ------------------*/
 	&__menu
 		float: right
-		//margin-top: 36px
-		margin-right: 1.3%
+		margin-right: 0.9em
 		margin-bottom: 33px
 	
 	&__list
@@ -696,6 +696,59 @@ input
 	font-size: 14px
 	line-height: 1.3
 	
+/*-------------------- Mobile menu --------------------*/
+.hamburger
+	display: none
+	float: left
+
+#mobile-menu,
+.site-overlay
+	display: none
+
+.pushy
+	&.pushy-left
+		background-color: $greyLighter
+	
+	.header__menu
+		width: 100%
+		padding-right: 0
+		padding-left: 0
+		margin: 0
+		text-align: left
+		
+	.header__list
+		margin: 0 auto !important
+		
+	.header__item
+		display: inline-block
+		width: 100%
+		
+		& + li:before
+			display: none
+		
+	.header__link
+		padding: 5px 15px
+		color: $black
+		
+		&:hover
+			color: $black
+			background-color: $greyLight
+
+	.header__consultation
+		float: left
+		width: 100%
+		margin: 0
+		text-align: center
+		
+	.button
+		padding: 5px 0
+		color: $white
+		border-radius: 0
+		
+		&:hover
+			background-color: $redLight
+		
+
 
 
 @import "fonts"

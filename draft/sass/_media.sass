@@ -3,38 +3,52 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 1054px)
+@media only screen and (max-width : 1024px)
+  .header__contact
+    margin-top: 55px
+    margin-bottom: 0
+    
+  .header__main
+    position: fixed
+    top: 0
+    height: 55px
+    padding-top: 0
+    border-bottom: 1px solid $greyLight
+    z-index: 100
+  
   .header .icon-logo
     width: 79px
     padding-right: 0
     font-size: 42px
     
   .header__wrap
-    width: 120px
     padding: 0
     
-  .header__logo
-    width: 190px
-    float: left
+  .header__logo,
+  .header__main--fixed .header__logo
+    margin-top: 5px
     padding-right: 0
 
-  
   .header__title
     height: 32px
-    margin-top: 8px
     font-size: 26px
   
   .header__subheader
-    font-size: 14px
+    margin-top: -10px
+    font-size: 15px
     
   .header__menu
     text-align: center
+    font-size: 15px
     
   .header__item + li:before
     margin: 0 2px
   
   .header__consultation
     margin-left: 0
+  
+    .button
+      font-size: 14px
     
   .about-us__shell
     padding: 0
@@ -48,7 +62,21 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+  .hamburger
+    display: inline-block
+
+  #mobile-menu,
+  .site-overlay
+    display: inline-block
   
+  .header__main
+    .header__menu,
+    .header__consultation
+       display: none
+  
+    .header__logo
+      left: 27%
+      
   /*Disable Animation on Mobile Devices*/
   .animated
     /*CSS transitions*/
@@ -69,8 +97,7 @@
     -o-animation: none !important
     -ms-animation: none !important
     animation: none !important
-  
-  
+    
   .approch .approch__step
     .approch__picture
       float: left
@@ -91,7 +118,10 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  /**/
+  .header__main
+    .header__logo
+      float: right
+      left: -12%
 
 
 /* Custom, iPhone Retina */
