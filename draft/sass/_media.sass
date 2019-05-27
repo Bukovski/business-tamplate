@@ -219,7 +219,32 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+  .header
+    .header__contact
+      height: 30px
+    
+    .header__feedback
+      float: left
+    
+    .icon-facebook
+      width: 23px
+      height: 23px
+      margin-top: 3px
+      margin-right: 5px
+      padding: 3px
+    
+    .header__mail
+      padding: 3px 5px 2px 7px
+    
+    .header__phone
+      float: left
+      padding: 4px 0px 0px 5px
+      border-right: 0
+      border-left: 1px solid #e3e3e3
+  
   .header__main
+    height: 42px
+    
     .header__logo
       float: right
       left: -12%
@@ -238,7 +263,25 @@
   
   .button--big
     font-size: 16px
-
+    
+  .hamburger
+    padding: 10px
+    
+  .header .icon-logo
+    width: 67px
+    font-size: 33px
+    
+  .header__title
+    height: 32px
+    font-size: 22px
+  
+  .header__subheader
+    margin-top: -17px
+    font-size: 15px
+    
+  .header__contact
+    margin-top: 42px
+    
   /*---- ABOUT US ----*/
   /*---- APPROCH ----*/
   
@@ -284,5 +327,8 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-  /**/
+  .header
+    .icon-mobile,
+    .icon-mail
+      display: none
 
